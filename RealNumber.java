@@ -19,9 +19,11 @@ public class RealNumber{
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
   public boolean equals(RealNumber other){
-    if(value==0) return other.getValue()==0;
-    if(other.getValue()==0) return value==0;
-    return true;
+    if(getValue()==0) return other.getValue()==0;
+    if(other.getValue()==0) return getValue()==0;
+    double percentDiff=Math.abs(getValue()-other.getValue());
+    percentDiff=percentDiff/((Math.abs(getValue())+Math.abs(other.getValue()))/2);
+    return percentDiff<=0.00001;
   }
 
   /*
