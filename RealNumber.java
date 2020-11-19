@@ -19,6 +19,8 @@ public class RealNumber{
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
   public boolean equals(RealNumber other){
+    if(value==0) return other.getValue()==0;
+    if(other.getValue()==0) return value==0;
     return true;
   }
 
