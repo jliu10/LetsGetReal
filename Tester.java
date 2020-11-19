@@ -11,5 +11,8 @@ public class Tester{
     equalsTester(zero,zero);
     equalsTester(zero,one);
     equalsTester(two,zero);
+    equalsTester(one,one);
+    equalsTester(one,two);
+    equalsTester(two,one);
   }
 }
