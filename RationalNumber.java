@@ -70,7 +70,7 @@ public class RationalNumber extends RealNumber
     /*use euclids method or a better one
     http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
     */
-    if(a<b){
+    if(a!=0 && a<b){
       int t=a;
       a=b;
       b=t;
@@ -99,7 +99,10 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    int num=getNumerator()*other.getNumerator();
+    int den=getDenominator()*other.getDenominator();
+    RationalNumber prod=new RationalNumber(num,den);
+    return prod;
   }
 
   /**
