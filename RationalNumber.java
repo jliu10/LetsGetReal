@@ -68,7 +68,18 @@ public class RationalNumber extends RealNumber
     /*use euclids method or a better one
     http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
     */
-    return 0;
+    if(a<b){
+      int t=a;
+      a=b;
+      b=t;
+    }
+    int r=a%b;
+    while(r!=0){
+      a=b;
+      b=r;
+      r=a%b;
+    }
+    return b;
   }
 
   /**
