@@ -129,13 +129,8 @@ public class RationalNumber extends RealNumber
     int num=(l/getDenominator())*getNumerator()+
              (l/other.getDenominator())*other.getNumerator();
     int den=l;
-<<<<<<< HEAD
     RationalNumber sum=new RationalNumber(num,den);
     return sum;
-=======
-    RationalNumber quot=new RationalNumber(num,den);
-    return quot;
->>>>>>> 9e8a9cb1496572b2de277af5180423c77d7c15ae
   }
   /**
   *Return a new RationalNumber that this minus the other
