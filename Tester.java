@@ -11,6 +11,24 @@ public class Tester{
     System.out.println();
   }
 
+  public static void multiplyTester(RealNumber x, RealNumber y){
+    System.out.print(x+" multiply "+y+" is ");
+    System.out.print(x.multiply(y));
+    System.out.println();
+  }
+
+  public static void divideTester(RealNumber x, RealNumber y){
+    System.out.print(x+" divide "+y+" is ");
+    System.out.print(x.divide(y));
+    System.out.println();
+  }
+
+  public static void subtractTester(RealNumber x, RealNumber y){
+    System.out.print(x+" subtract "+y+" is ");
+    System.out.print(x.subtract(y));
+    System.out.println();
+  }
+
   public static void main(String[] args){
     RealNumber zero=new RealNumber(0);
     RealNumber one=new RealNumber(1);
@@ -26,11 +44,38 @@ public class Tester{
     equalsTester(two,one);
     equalsTester(half,one);
     equalsTester(zero,half);
+    equalsTester(zero,zero.multiply(neg));
 
     addTester(zero,zero);
     addTester(one,zero);
     addTester(zero,neg);
     addTester(half,neg);
     addTester(neg,neg);
+    addTester(one,two);
+    addTester(two,half);
+
+    multiplyTester(zero,zero);
+    multiplyTester(one,zero);
+    multiplyTester(zero,neg);
+    multiplyTester(half,neg);
+    multiplyTester(neg,neg);
+    multiplyTester(one,two);
+    multiplyTester(two,half);
+
+    divideTester(zero,zero);
+    divideTester(one,zero);
+    divideTester(zero,neg);
+    divideTester(half,neg);
+    divideTester(neg,neg);
+    divideTester(one,two);
+    divideTester(two,half);
+
+    subtractTester(zero,zero);
+    subtractTester(one,zero);
+    subtractTester(zero,neg);
+    subtractTester(half,neg);
+    subtractTester(neg,neg);
+    subtractTester(one,two);
+    subtractTester(two,half);
   }
 }
