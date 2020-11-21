@@ -109,7 +109,10 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    int num=getNumerator()*other.getDenominator();
+    int den=getDenominator()*other.getNumerator();
+    RationalNumber quot=new RationalNumber(num,den);
+    return quot;
   }
 
   /**
