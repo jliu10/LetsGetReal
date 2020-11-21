@@ -164,7 +164,9 @@ public class Tester{
     subtractTester(oneR,oneR);
     subtractTester(negR,half1R);
 
-//    addTester(one,halfR);
+    addTester(one,halfR);
+    divideTester(two,zeroR);
+    multiplyTester(one1R,half);
 
   }
 }
