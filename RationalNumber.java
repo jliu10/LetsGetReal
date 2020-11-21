@@ -115,11 +115,22 @@ public class RationalNumber extends RealNumber
     return quot;
   }
 
+  public int lcm(int a, int b){
+    int m=Math.abs(a*b);
+    m/=gcd(a,b);
+    return m;
+  }
+
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int l=lcm(getDenominator(),other.getDenominator());
+    int num=(l/getDenominator())*getNumerator()+
+             (l/other.getDenominator())*other.getNumerator();
+    int den=l;
+    RationalNumber quot=new RationalNumber(num,den);
+    return quot;
   }
   /**
   *Return a new RationalNumber that this minus the other
