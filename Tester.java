@@ -167,6 +167,7 @@ public class Tester{
     addTester(one,halfR);
     divideTester(two,zeroR);
     multiplyTester(one1R,half);
+    equalsTester(one,oneR);
 
   }
 }
