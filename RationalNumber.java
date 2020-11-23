@@ -20,7 +20,6 @@ public class RationalNumber extends RealNumber
   }
 
   public double getValue(){
-    if(getDenominator()==1) return getNumerator();
     double n=getNumerator();
     return n/getDenominator();
   }
@@ -59,6 +58,7 @@ public class RationalNumber extends RealNumber
   */
   public String toString(){
     String str="";
+    if(getDenominator()==1) return str+getNumerator();
     str+=getNumerator()+"/"+getDenominator();
     return str;
   }
