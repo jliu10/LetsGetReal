@@ -2,7 +2,7 @@ public class RealNumber extends Number{
   private double value;
 
   public RealNumber(){
-    valur=0.0;
+    value=0.0;
   }
 
   public RealNumber(double v){
