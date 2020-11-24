@@ -100,8 +100,11 @@ public class Tester{
     RationalNumber halfR=new RationalNumber(1,2);
     RationalNumber half1R=new RationalNumber(2,4);
     RationalNumber negR=new RationalNumber(-2,2);
+    RationalNumber neg1R=new RationalNumber(2,-2);
     RationalNumber oneR=new RationalNumber(1,1);
     RationalNumber one1R=new RationalNumber(-2,-2);
+    RationalNumber negHalfR=new RationalNumber(-1,2);
+    RationalNumber negHalf1R=new RationalNumber(1,-2);
 
     reciprocalTester(zeroR);
     reciprocalTester(halfR);
@@ -150,5 +153,13 @@ public class Tester{
     compareToTester(half,one1R);
     compareToTester(zeroR,zero);
 
+    System.out.println(oneR);
+    System.out.println(one1R);
+    System.out.println(negR);
+    System.out.println(neg1R);
+    System.out.println(-2%2);
+    System.out.println(2%-2);
+    System.out.println(negHalfR);
+    System.out.println(negHalf1R);
   }
 }
