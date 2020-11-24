@@ -35,33 +35,9 @@ public class Tester{
     System.out.println();
   }
 
-  public static void equalsTester(RationalNumber x, RationalNumber y){
-    System.out.print(x+" equals "+y+" is ");
-    System.out.print(x.equals(y));
-    System.out.println();
-  }
-
-  public static void multiplyTester(RationalNumber x, RationalNumber y){
-    System.out.print(x+" multiply "+y+" is ");
-    System.out.print(x.multiply(y));
-    System.out.println();
-  }
-
-  public static void divideTester(RationalNumber x, RationalNumber y){
-    System.out.print(x+" divide "+y+" is ");
-    System.out.print(x.divide(y));
-    System.out.println();
-  }
-
-  public static void addTester(RationalNumber x, RationalNumber y){
-    System.out.print(x+" add "+y+" is ");
-    System.out.print(x.add(y));
-    System.out.println();
-  }
-
-  public static void subtractTester(RationalNumber x, RationalNumber y){
-    System.out.print(x+" subtract "+y+" is ");
-    System.out.print(x.subtract(y));
+  public static void compareToTester(Number x, Number y){
+    System.out.print(x+" compared to "+y+" is ");
+    System.out.print(x.compareTo(y));
     System.out.println();
   }
 
@@ -168,6 +144,11 @@ public class Tester{
     divideTester(two,zeroR);
     multiplyTester(one1R,half);
     equalsTester(one,oneR);
+
+    compareToTester(one,halfR);
+    compareToTester(one,oneR);
+    compareToTester(half,one1R);
+    compareToTester(zeroR,zero);
 
   }
 }
