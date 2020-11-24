@@ -6,7 +6,9 @@ public abstract class Number{
   return a positive value when this Number is larger than the other Number
   */
   public int compareTo(Number other){
-    //TO BE IMPLEMENTED
+    if(getValue()==other.getValue()) return 0;
+    if(getValue()<other.getValue()) return -1;
+    return 1;
   }
 
   /*
@@ -20,4 +22,5 @@ public abstract class Number{
     double percentDiff=Math.abs(getValue()-other.getValue());
     percentDiff=percentDiff/((Math.abs(getValue())+Math.abs(other.getValue()))/2);
     return percentDiff<=0.00001;
+  }
 }
