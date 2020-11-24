@@ -13,12 +13,11 @@ public class RationalNumber extends RealNumber
       numerator=0;
       denominator=1;
     }else{
-      if(deno<0){
-        numerator=nume*-1;
-        denominator=deno*-1;
-      }else{
-        numerator=nume;
-        denominator=deno;
+      numerator=nume;
+      denominator=deno;
+      if(denominator<0){
+        numerator=nume*(-1);
+        denominator=deno*(-1);
       }
       reduce();
     }
@@ -63,7 +62,6 @@ public class RationalNumber extends RealNumber
   */
   public String toString(){
     if(getNumerator()==0) return "0";
-    if(getDenominator()==-1) return "-"+getNumerator();
     String str="";
     if(getDenominator()==1) return str+getNumerator();
     str+=getNumerator()+"/"+getDenominator();
@@ -90,7 +88,7 @@ public class RationalNumber extends RealNumber
       b=r;
       r=a%b;
     }
-    return b;
+    return Math.abs(b);
   }
 
   /**
